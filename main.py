@@ -1,6 +1,4 @@
 from cpf import Cpf
-#commit de teste
-cpf = str(78287212361)
 
-objeto_cpf = Cpf(cpf)
-print(objeto_cpf)
+cpf_um = Cpf("15316264754")
+print(cpf_um)

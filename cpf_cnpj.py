@@ -5,9 +5,9 @@ class Documento:
     @staticmethod
     def criar_documento(documento):
         if(len(documento) == 11):
-            return DocCpf(documento)
+            return DocCpf(str(documento))
         elif(len(documento) == 14):
-            return DocCnpj(documento)
+            return DocCnpj(str(documento))
         else:
             raise ValueError('A quantidade de dígitos está incorreta !')
 

@@ -1,13 +1,27 @@
-from cpf_cnpj import CpfCnpj
-from validate_docbr import CNPJ
+import re
 
-# cpf_um = Cpf("15316264754")
-# print(cpf_um)
+# padrao = re.compile("[0-9][a-z]{1,2}?[0-9]")
+# texto = '1a3 1ad7 1a2 1cc dd1'
+#
+# busca = padrao.match(texto)
+# busca2 = padrao.search(texto)
+# # outra_forma = re.search(padrao, '7a3')
+#
+# if(busca):
+#     print(busca.group())
+# else:
+#     print('Não combina')
+#
+#
+# if(busca2):
+#     print(busca2.group())
+# else:
+#     print('Não combina.')
 
-cnpj = '46966413000126'
-cpf = '57525975019'
-# cnpj = CNPJ()
-# print(cnpj.validate('46966413000126'))
+padrao_email = "\w{5,50}@[a-z]{3,10}.com.br"
+texto = "adfdfdsafdasfasdfasf hamda@gmail.com.br dfdfdf"
+resposta = re.search(padrao_email, texto)
 
-documento = CpfCnpj(cpf, 'cpf')
-print(documento)
+# padrao_compile = re.compile(padrao_email)
+# busca_email = padrao_compile.search(texto)
+print(resposta.group())

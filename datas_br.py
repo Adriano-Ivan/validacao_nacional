@@ -7,6 +7,13 @@ class DatasBr:
         self.__definir_mes_cadastro()
         self.__definir_dias()
         self.__definir_dia_da_semana()
+        self.__formatar_momento_cadastro()
+
+    def __str__(self):
+        return self.__momento_cadastro
+
+    def __formatar_momento_cadastro(self):
+        self.__momento_cadastro = self.__momento_cadastro.strftime("%d/%m/%Y %H:%M")
 
     def __definir_mes_cadastro(self):
         numero = self.__momento_cadastro.month

@@ -24,4 +24,5 @@ resposta = re.search(padrao_email, texto)
 
 # padrao_compile = re.compile(padrao_email)
 # busca_email = padrao_compile.search(texto)
+#teste
 print(resposta.group())

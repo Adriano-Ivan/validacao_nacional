@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class DatasBr:
     def __init__(self):
@@ -7,6 +7,7 @@ class DatasBr:
         self.__definir_mes_cadastro()
         self.__definir_dias()
         self.__definir_dia_da_semana()
+        self.__definir_tempo_cadastro()
         self.__formatar_momento_cadastro()
 
     def __str__(self):
@@ -33,6 +34,13 @@ class DatasBr:
         self.__dias_da_semana = ['segunda-feira', 'terça-feira',
                                  'quarta-feira', 'quinta-feira', 'sexta-feira',
         'sábado', 'domingo']
+
+    def __definir_tempo_cadastro(self):
+        self.__tempo_cadastro =  (datetime.today() + timedelta(days=30)) - self.__momento_cadastro
+
+    @property
+    def tempo_cadastro(self):
+        return self.__tempo_cadastro
 
     @property
     def mes_cadastro(self):

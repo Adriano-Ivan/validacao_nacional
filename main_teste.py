@@ -3,15 +3,18 @@
 from datas_br import DatasBr
 from datetime import datetime, timedelta
 
-cadastro = DatasBr()
-print(cadastro)
+# cadastro = DatasBr()
+# print(cadastro)
 # print(cadastro.momento_cadastro)
 # print(cadastro.mes_cadastro)
 # print(cadastro.dia_da_semana)
-hoje = datetime.today()
-hoje_formatado = hoje.strftime("%d/%m/%Y %H:%M")
-print(hoje)
-print(hoje_formatado)
+# hoje = datetime.today()
+# hoje_formatado = hoje.strftime("%d/%m/%Y %H:%M")
+# print(hoje)
+# print(hoje_formatado)
+
+hoje = DatasBr()
+print(hoje.tempo_cadastro)
 
 
 # padrao = re.compile("[0-9][a-z]{1,2}?[0-9]")

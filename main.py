@@ -1,5 +1,12 @@
-import re
-from telefones_br import TelefonesBr
+# import re
+# from telefones_br import TelefonesBr
+from datas_br import DatasBr
+from datetime import datetime, timedelta
+
+cadastro = DatasBr()
+print(cadastro.momento_cadastro)
+print(cadastro.mes_cadastro)
+print(cadastro.dia_da_semana)
 
 # padrao = re.compile("[0-9][a-z]{1,2}?[0-9]")
 # texto = '1a3 1ad7 1a2 1cc dd1'
@@ -28,9 +35,9 @@ from telefones_br import TelefonesBr
 #teste
 # print(resposta.group())
 
-telefone = 'aadfd 552378892134'
-telefone_objeto = TelefonesBr(telefone)
-print(telefone_objeto)
+# telefone = 'aadfd 552378892134'
+# telefone_objeto = TelefonesBr(telefone)
+# print(telefone_objeto)
 # padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
 # resposta = re.search(padrao, telefone)
 # print(resposta.group())

@@ -5,10 +5,10 @@ from acesso_cep import BuscaEndereco
 import requests
 from datetime import datetime, timedelta
 
-cep_numero = 85234213
+cep_numero = 85862508
 cep = BuscaEndereco(cep_numero)
-print(cep)
-print(type(cep.acessa_via_cep()))
+bairro, cidade, unidade_da_federacao = cep.acessa_via_cep()
+print(bairro, cidade, unidade_da_federacao,sep='->')
 # print(dir(cep.acessa_via_cep()))
 # cadastro = DatasBr()
 # print(cadastro)

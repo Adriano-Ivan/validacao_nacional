@@ -7,7 +7,6 @@ class DatasBr:
         self.__definir_mes_cadastro()
         self.__definir_dias()
         self.__definir_dia_da_semana()
-        self.__definir_tempo_cadastro()
         self.__formatar_momento_cadastro()
 
     def __str__(self):
@@ -35,11 +34,8 @@ class DatasBr:
                                  'quarta-feira', 'quinta-feira', 'sexta-feira',
         'sábado', 'domingo']
 
-    def __definir_tempo_cadastro(self):
-        self.__tempo_cadastro =  (datetime.today() + timedelta(days=30)) - self.__momento_cadastro
-
-    @property
-    def tempo_cadastro(self):
+    def capturar_tempo_cadastro(self):
+        self.__tempo_cadastro =  (datetime.today() + timedelta(days=30)) - datetime.strptime(str(self.__momento_cadastro), "%d/%m/%Y %H:%M")
         return self.__tempo_cadastro
 
     @property

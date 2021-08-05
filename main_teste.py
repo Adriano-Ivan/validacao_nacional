@@ -1,8 +1,15 @@
 # import re
 # from telefones_br import TelefonesBr
 from datas_br import DatasBr
+from acesso_cep import BuscaEndereco
+import requests
 from datetime import datetime, timedelta
 
+cep_numero = 85234213
+cep = BuscaEndereco(cep_numero)
+print(cep)
+print(type(cep.acessa_via_cep()))
+# print(dir(cep.acessa_via_cep()))
 # cadastro = DatasBr()
 # print(cadastro)
 # print(cadastro.momento_cadastro)
@@ -12,9 +19,9 @@ from datetime import datetime, timedelta
 # hoje_formatado = hoje.strftime("%d/%m/%Y %H:%M")
 # print(hoje)
 # print(hoje_formatado)
-
-hoje = DatasBr()
-print(hoje.tempo_cadastro)
+#
+# hoje = DatasBr()
+# print(hoje.capturar_tempo_cadastro())
 
 
 # padrao = re.compile("[0-9][a-z]{1,2}?[0-9]")
